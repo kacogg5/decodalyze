@@ -29,9 +29,9 @@ def calculate_similarity(a, b):
     }
 
     def keyboard_score(word):
-        from fold_to_ascii import fold
         if len(word) == 0: return 0, 0, 0
 
+        from fold_to_ascii import fold
         total = 1
         dx = dy = 0
         x, y = (0, 0)
@@ -126,19 +126,24 @@ class Trie:
     def get_suggestions(self, k=3):
         words = {}
         que = [(self.current_word, 0, self.current)]
+        visited = []
 
         checked = 0
         while que and checked < 1000:
             stem, score, curr = que.pop(0)
-            if curr.end: words[stem] = score
-            que += [(stem + c, 0.5 * branch.frequency, branch)
-                    for c, branch in curr.branches.items()]
-            que += [(name, calculate_similarity(self.current_word, name) * sibling.frequency, sibling)
-                    for name, (sim, sibling) in curr.siblings.items()]
-            checked += 1
+            if stem not in visited:
+                if curr.end: words[stem] = score
+                visited += [stem]
+                que += [(stem + c, 0.5 * branch.frequency, branch)
+                        for c, branch in curr.branches.items()]
+                que += [(name, calculate_similarity(self.current_word, name) * sibling.frequency, sibling)
+                        for name, (sim, sibling) in curr.siblings.items()]
+                que += [(stem[:-1], 3 * calculate_similarity(self.current_word, stem[:-1])
+                         * curr.parent.frequency, curr.parent)]
+                checked += 1
 
         if checked >= 1000:
-            print("Terminated by ")
+            print("Terminated by iterations")
         return sorted(words, key=words.get)[-k:]
 
     def update_siblings(self, to_find):
