@@ -1,0 +1,50 @@
+UDF, Misc. Phrases, ./docs/misc_phrases.txt
+SAO, Crossing Field, ./docs/crossing_field.txt
+SAO, Yume Sekai (Dream World), ./docs/yume_sekai_dream_world_.txt
+SAO, Innocence, ./docs/innocence.txt
+MHA, Polaris, ./docs/polaris.txt
+MHA, Koukai no Uta, ./docs/koukai_no_uta.txt
+SAO, Ignite, ./docs/ignite.txt
+SAO, Startear, ./docs/startear.txt
+SAO, Courage, ./docs/courage.txt
+SAO, Shirushi, ./docs/shirushi.txt
+ZNT, Say yes, ./docs/say_yes.txt
+ZNT, Honto no Kimochi (true feelings), ./docs/honto_no_kimochi_true_feelings_.txt
+FT, Rocking Playing game, ./docs/rocking_playing_game.txt
+FT, Breakthrough, ./docs/breakthrough.txt
+TRS, Meguru mono, ./docs/meguru_mono.txt
+DC, closing	1, ./docs/closing_1.txt
+DC, opening 1, ./docs/opening_1.txt
+DC, Closing 2, ./docs/closing_2.txt
+DC, Opening 2, ./docs/opening_2.txt
+DC, Hikari to Kage no Romance, ./docs/hikari_to_kage_no_romance.txt
+DC, Nazo, ./docs/nazo.txt
+DC, Special ending 1, ./docs/special_ending_1.txt
+DC, Kimi ga Inai Natsu, ./docs/kimi_ga_inai_natsu.txt
+DC, Return to Love, ./docs/return_to_love.txt
+DC, Negai goto hitotsu dake, ./docs/negai_goto_hitotsu_dake.txt
+DC, Unmei no Ruuretto mawashite, ./docs/unmei_no_ruuretto_mawashite.txt
+DC, koori no, ./docs/koori_no.txt
+DC, Truth, ./docs/truth.txt
+DC, Miss Mystery, ./docs/miss_mystery.txt
+DC, Your best friend, ./docs/your_best_friend.txt
+DC, Still for your love, ./docs/still_for_your_love.txt
+DC, GiriGiri-Chop, ./docs/girigiri_chop.txt
+DC, Free Magic, ./docs/free_magic.txt
+DC, Mystery eyes, ./docs/mystery_eyes.txt
+DC, Donna kotoba ni Kaete, ./docs/donna_kotoba_ni_kaete.txt
+DC, Thrill, Shock, Suspense, ./docs/thrill_shock_suspense.txt
+TT, ], ./docs/_.txt
+TT, sekai no namida, ./docs/sekai_no_namida.txt
+TT, Unnamed Song 1, ./docs/unnamed_song_1.txt
+PM, Ring of Fortune, ./docs/ring_of_fortune.txt
+CLND, Unnamed Song 2, ./docs/unnamed_song_2.txt
+CLND, Till the End of the Dream, ./docs/till_the_end_of_the_dream.txt
+CLND, Unnamed Song 3, ./docs/unnamed_song_3.txt
+CLND, Unnamed Song 4, ./docs/unnamed_song_4.txt
+HKU, Imagination, ./docs/imagination.txt
+HKU, Tenchi Gaeshi, ./docs/tenchi_gaeshi.txt
+MHS, Unnamed Song 5, ./docs/unnamed_song_5.txt
+MHS, Unnamed Song 6, ./docs/unnamed_song_6.txt
+AB, My Soul, your beats, ./docs/my_soul_your_beats.txt
+AB, Brave Song, ./docs/brave_song.txt
