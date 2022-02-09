@@ -5,10 +5,6 @@ from models.Trie import Trie
 start = time.time()
 
 english = Trie()
-# for c in "rough tough trough though thought through throughout" \
-#          " thorough three them the then there that thorn thatch " \
-#          "thistle thursday the":
-#     english.move(c)
 
 english.load("./models/tries/english.txt")
 

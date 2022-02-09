@@ -1,34 +1,8 @@
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QResizeEvent
-from PySide6.QtWidgets import QWidget, QGridLayout, QHBoxLayout, QLabel, QVBoxLayout, QSizePolicy
+from PySide6.QtWidgets import QWidget, QGridLayout, QLabel, QVBoxLayout
 
-
-class EditorLine(QWidget):
-    def __init__(self, text):
-        super().__init__()
-        self.content = text
-
-        self.layout = QHBoxLayout(self)
-        self.layout.setContentsMargins(2, 0, 0, 1)
-
-        self.content_label = QLabel(text=self.content)
-        self.content_label.setWordWrap(True)
-        self.content_label.setAlignment(Qt.AlignTop)
-        self.content_label.setStyleSheet("""
-            background: transparent;
-            color: #8e8e8e;
-            font-family: 'Lucida Console';
-            font-size: 12px;
-            border-radius: 0;
-            padding: 0 2px 0 0;
-        """)
-
-        self.layout.addWidget(self.content_label)
-
-
-class EnhancedEditorLine(QWidget):
-    def __init__(self, lang_a, lang_b):
-        super().__init__()
+from widgets.EditorLine import EditorLine
 
 
 class DocumentEditor(QWidget):
