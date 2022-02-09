@@ -9,7 +9,6 @@ english = Trie()
 #          " thorough three them the then there that thorn thatch " \
 #          "thistle thursday the":
 #     english.move(c)
-#     print(english.current_word+':', english.get_suggestions(3))
 
 english.load("./models/tries/english.txt")
 

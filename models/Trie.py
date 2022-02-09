@@ -134,17 +134,16 @@ class Trie:
             if stem not in visited:
                 if curr.end: words[stem] = score
                 visited += [stem]
-                que += [(stem + c, 0.5 * branch.frequency, branch)
+                que += [(stem + c, score + 0.25 * calculate_similarity(stem, stem + c) / max(1, branch.frequency), branch)
                         for c, branch in curr.branches.items()]
-                que += [(name, calculate_similarity(self.current_word, name) * sibling.frequency, sibling)
+                que += [(name, score + calculate_similarity(self.current_word, name) / max(1, sibling.frequency), sibling)
                         for name, (sim, sibling) in curr.siblings.items()]
-                que += [(stem[:-1], 3 * calculate_similarity(self.current_word, stem[:-1])
-                         * curr.parent.frequency, curr.parent)]
+                que += [(stem[:-1], score + calculate_similarity(self.current_word, stem[:-1]) / max(1, curr.parent.frequency), curr.parent)]
                 checked += 1
 
         if checked >= 1000:
             print("Terminated by iterations")
-        return sorted(words, key=words.get)[-k:]
+        return {w: words[w] for w in sorted(words, key=words.get)[:k]}
 
     def update_siblings(self, to_find):
         pre = ""
