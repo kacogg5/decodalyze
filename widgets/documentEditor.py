@@ -2,7 +2,7 @@ from PySide6.QtCore import Qt
 from PySide6.QtGui import QResizeEvent
 from PySide6.QtWidgets import QWidget, QGridLayout, QLabel, QVBoxLayout
 
-from widgets.EditorLine import EditorLine
+from widgets.EditorLine import EditorLine, EnhancedEditorLine
 
 
 class DocumentEditor(QWidget):
@@ -21,7 +21,8 @@ class DocumentEditor(QWidget):
 
         self.content = [
             "No document has been selected.",
-            "Open a file from the menu on the left."
+            "Open a file from the menu on the left.",
+            ":)"
         ]
 
         for n, line in enumerate(self.content):
@@ -51,11 +52,15 @@ class DocumentEditor(QWidget):
             ln_layout.addWidget(ln_label)
 
             self.numbers.append(ln_widget)
-            self.layout.addWidget(ln_widget, n, 0)
+            self.layout.addWidget(ln_widget, n, 0, 1, 1)
 
-            # content
-            self.lines.append(EditorLine(line))
-            self.layout.addWidget(self.lines[-1], n, 1)
+            # # content
+            # self.lines.append(EditorLine(line))
+            # self.layout.addWidget(self.lines[-1], n, 1)
+
+            if n % 3 == 2:
+                self.lines.append(EnhancedEditorLine("Hello World", "Hola Mundo!"))
+                self.layout.addWidget(self.lines[-1], n-2, 1, 1, 3)
 
         self.layout.setRowStretch(len(self.content) - 1, 1)
         self.layout.setColumnStretch(1, 1)
