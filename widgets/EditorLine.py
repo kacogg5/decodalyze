@@ -90,7 +90,7 @@ class EnhancedEditorLine(QWidget):
         def hover_end(self):
             bg = 'transparent'
             bd = '#525252'
-            tx = '#8e8e8e'
+            tx = '#aeaeae'
 
             if self.pair.error > 0:
                 bg = ['', 'rgba(70, 140, 0, 0.08)', 'rgba(140, 0, 0, 0.08)'][self.pair.error]
@@ -140,7 +140,7 @@ class EnhancedEditorLine(QWidget):
             label.setFixedHeight(16)
             label.setStyleSheet("""
                 background: transparent;
-                color: #8e8e8e;
+                color: #aeaeae;
                 border-radius: 2px;
                 padding: 1px 0 0 0;
                 border: 1px solid #525252;
@@ -175,13 +175,13 @@ class EnhancedEditorLine(QWidget):
             link_id = -1
             err = 0
             flags = ''
-            processed = [""]
+            processed = ['']
             for s in contents:
                 if type(s) is str:
                     if s.isnumeric():
                         if link_id < 0: link_id = int(s)
                         else: err = max(err, 1)
-                    elif s in "_^?~": flags += s
+                    elif s in '_^?~': flags += s
                     else:
                         if type(processed[-1]) is not str: processed.append('')
                         processed[-1] += s
@@ -215,9 +215,9 @@ class EnhancedEditorLine(QWidget):
                 return pair
 
         def split_line(line, a_or_b, pool):
-            split = [""]
+            split = ['']
             for c in line:
-                if c == "]" and '[' in split:
+                if c == ']' and '[' in split:
                     p = -split[::-1].index('[')
                     split, ctnt = split[:p-1], split[p:]
                     split.append(process(ctnt, pool, a_or_b))

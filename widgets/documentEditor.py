@@ -67,6 +67,7 @@ class DocumentEditor(QWidget):
                 self.layout.setRowStretch(i, 0)
                 self.layout.removeWidget(self.numbers[i])
                 self.layout.removeWidget(self.lines[i])
+                self.numbers[i].setParent(None)
                 self.lines[i].setParent(None)
 
             mw = 50
